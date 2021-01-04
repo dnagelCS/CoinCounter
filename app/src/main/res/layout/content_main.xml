@@ -20,26 +20,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/card_margin"
+        android:alpha=".8"
         app:layout_constraintEnd_toStartOf="@id/nickel_card"
         app:layout_constraintStart_toStartOf="@+id/instructions_banner"
         app:layout_constraintTop_toBottomOf="@+id/instructions_banner">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/penny"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:contentDescription="@string/penny"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/penny" />
 
             <EditText
                 android:id="@+id/et_penny"
                 style="@style/EditTextStyle"
+                android:layout_height="wrap_content"
                 android:hint="@string/numberHint" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -61,9 +63,9 @@
             <ImageView
                 android:id="@+id/nickel"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:contentDescription="@string/nickel"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/nickel" />
 
             <EditText
@@ -90,9 +92,9 @@
             <ImageView
                 android:id="@+id/dime"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:contentDescription="@string/dime"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/dime" />
 
             <EditText
@@ -119,9 +121,9 @@
             <ImageView
                 android:id="@+id/quarter"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="70dp"
                 android:contentDescription="@string/quarter"
-                android:scaleType="fitXY"
+                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/quarter" />
 
             <EditText
