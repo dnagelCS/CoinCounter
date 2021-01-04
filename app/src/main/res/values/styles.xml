@@ -12,9 +12,11 @@
     <style name="BannerStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginBottom">@dimen/card_margin</item>
-        <item name="android:layout_marginTop">@dimen/fab_margin</item>
-        <item name="android:layout_marginRight">@dimen/fab_margin</item>
-        <item name="android:layout_marginLeft">@dimen/fab_margin</item>
+        <item name="android:layout_marginBottom">@dimen/standard_margin</item>
+        <item name="android:layout_marginTop">@dimen/banner_margin</item>
+        <item name="android:layout_marginRight">@dimen/banner_margin</item>
+        <item name="android:layout_marginLeft">@dimen/banner_margin</item>
     </style>
+
+    <dimen name="banner_margin">24dp</dimen>
 </resources>
