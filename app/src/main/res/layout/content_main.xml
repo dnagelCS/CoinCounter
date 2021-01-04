@@ -3,37 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <include layout="@layout/main_include_banner" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".5" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/instructions_banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/card_margin"
-        app:cardBackgroundColor="@color/primaryLightColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/instructions_banner"
-            android:textAllCaps="true"
-            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-            android:textColor="@color/primaryTextColor"
-            android:textStyle="bold" />
-
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/penny_card"
@@ -44,19 +24,24 @@
         app:layout_constraintStart_toStartOf="@+id/instructions_banner"
         app:layout_constraintTop_toBottomOf="@+id/instructions_banner">
 
-        <ImageView
-            android:id="@+id/penny"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/penny"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/penny" />
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/numberHint"
-            android:inputType="number" />
+            <ImageView
+                android:id="@+id/penny"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/penny"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/penny" />
+
+            <EditText
+                android:id="@+id/et_penny"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -68,19 +53,24 @@
         app:layout_constraintStart_toEndOf="@id/penny_card"
         app:layout_constraintTop_toBottomOf="@id/instructions_banner">
 
-        <ImageView
-            android:id="@+id/nickel"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/nickel"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/nickel" />
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/numberHint"
-            android:inputType="number" />
+            <ImageView
+                android:id="@+id/nickel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/nickel"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/nickel" />
+
+            <EditText
+                android:id="@+id/et_nickel"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -92,19 +82,24 @@
         app:layout_constraintStart_toEndOf="@id/guide"
         app:layout_constraintTop_toBottomOf="@id/instructions_banner">
 
-        <ImageView
-            android:id="@+id/dime"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/dime"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/dime" />
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/numberHint"
-            android:inputType="number" />
+            <ImageView
+                android:id="@+id/dime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/dime"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/dime" />
+
+            <EditText
+                android:id="@+id/et_dime"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -116,18 +111,23 @@
         app:layout_constraintStart_toEndOf="@id/dime_card"
         app:layout_constraintTop_toBottomOf="@id/instructions_banner">
 
-        <ImageView
-            android:id="@+id/quarter"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/quarter"
-            android:scaleType="fitXY"
-            app:srcCompat="@drawable/quarter" />
+            android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/numberHint"
-            android:inputType="number" />
+            <ImageView
+                android:id="@+id/quarter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/quarter"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/quarter" />
+
+            <EditText
+                android:id="@+id/et_quarter"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
