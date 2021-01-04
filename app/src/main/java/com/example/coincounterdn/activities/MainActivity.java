@@ -3,6 +3,7 @@ package com.example.coincounterdn.activities;
 import android.os.Bundle;
 
 import com.example.coincounterdn.R;
+import com.example.coincounterdn.models.CoinCounter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -13,22 +14,42 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+    private CoinCounter mCalculator;
+    private TextView mTv_statusMssg;
+    private Snackbar mSnackBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupToolbar();
+        setFieldReferences();
+        setupFab();
+    }
+
+    private void setupToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
 
+    private void setFieldReferences() {
+        mTv_statusMssg = findViewById(R.id.tv_status);
+    }
+
+    private void setupFab() {
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                mTv_statusMssg.setText(
+                        String.format(Locale.getDefault(), "%s: %d",
+                                getString(R.string.total),
+                                mCalculator.getCentsValueTotal()));
             }
         });
     }
