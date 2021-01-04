@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">CoinCounterDN</string>
-    <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -17,4 +16,7 @@
     <string name="numberHint">0</string>
     <string name="name">Devora Nagel</string>
     <string name="total">Total in cents: </string>
+    <string name="clear_all">Clear All</string>
+    <string name="about">About</string>
+    <string name="about_text">Coin Counter application created by\nDevora Nagel for the MCON 521 Final Exam</string>
 </resources>

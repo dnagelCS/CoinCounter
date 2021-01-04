@@ -3,9 +3,9 @@ package com.example.coincounterdn.activities;
 import android.os.Bundle;
 
 import com.example.coincounterdn.R;
+import com.example.coincounterdn.lib.Utils;
 import com.example.coincounterdn.models.CoinCounter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,21 +14,22 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    private CoinCounter mCalculator;
+    private CoinCounter mCoinCounter;
+    private EditText mEt_Penny, mEt_Nickel, mEt_Dime, mEt_Quarter;
     private TextView mTv_statusMssg;
-    private Snackbar mSnackBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setupToolbar();
-        setFieldReferences();
+        setupModelAndViews();
         setupFab();
     }
 
@@ -37,7 +38,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    private void setFieldReferences() {
+    private void setupModelAndViews() {
+        mCoinCounter = new CoinCounter();
+        mEt_Penny = findViewById(R.id.et_penny);
+        mEt_Nickel = findViewById(R.id.et_nickel);
+        mEt_Dime = findViewById(R.id.et_dime);
+        mEt_Quarter = findViewById(R.id.et_quarter);
         mTv_statusMssg = findViewById(R.id.tv_status);
     }
 
@@ -46,12 +52,21 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTv_statusMssg.setText(
-                        String.format(Locale.getDefault(), "%s: %d",
-                                getString(R.string.total),
-                                mCalculator.getCentsValueTotal()));
+                handleFABClick();
             }
         });
+    }
+
+    private void handleFABClick() {
+        mCoinCounter.setCountOfPennies(mEt_Penny.getText().toString());
+        mCoinCounter.setCountOfNickels(mEt_Nickel.getText().toString());
+        mCoinCounter.setCountOfDimes(mEt_Dime.getText().toString());
+        mCoinCounter.setCountOfQuarters(mEt_Quarter.getText().toString());
+        
+        mTv_statusMssg.setText(
+                String.format(Locale.getDefault(), "%s: %d",
+                        getString(R.string.total),
+                        mCoinCounter.getCentsValueTotal()));
     }
 
     @Override
@@ -68,11 +83,27 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if(id == R.id.clear_all) {
+            clearAll();
+            return true;
+        }
+        if (id == R.id.about) {
+            showAbout();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void clearAll() {
+        mEt_Penny.setText(R.string.numberHint);
+        mEt_Nickel.setText(R.string.numberHint);
+        mEt_Dime.setText(R.string.numberHint);
+        mEt_Quarter.setText(R.string.numberHint);
+    }
+
+    private void showAbout() {
+        Utils.showInfoDialog (MainActivity.this,
+                R.string.about, R.string.about_text);
     }
 }
