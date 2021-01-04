@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/penny"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/image_size"
                 android:contentDescription="@string/penny"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/penny" />
@@ -48,7 +48,7 @@
             <ImageView
                 android:id="@+id/nickel"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/image_size"
                 android:contentDescription="@string/nickel"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/nickel" />
@@ -75,7 +75,7 @@
             <ImageView
                 android:id="@+id/dime"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/image_size"
                 android:contentDescription="@string/dime"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/dime" />
@@ -102,7 +102,7 @@
             <ImageView
                 android:id="@+id/quarter"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/image_size"
                 android:contentDescription="@string/quarter"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/quarter" />

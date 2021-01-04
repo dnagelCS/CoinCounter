@@ -16,4 +16,5 @@
     <string name="quarter">Quarter</string>
     <string name="numberHint">0</string>
     <string name="name">Devora Nagel</string>
+    <string name="total">Total in cents: </string>
 </resources>
