@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Primary brand color-->
+    <color name="primaryColor">#039be5</color>
+    <color name="primaryLightColor">#63ccff</color>
+    <color name="primaryDarkColor">#006db3</color>
+    <color name="primaryTextColor">#000000</color>
+    <!--Secondary brand color-->
+    <color name="secondaryColor">#ffc107</color>
+    <color name="secondaryLightColor">#fff350</color>
+    <color name="secondaryDarkColor">#c79100</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <!-- For colored text; default is black/dark-gray (Day) or white/light-gray (Night) -->
+    <color name="colorPrimaryTextColored">@color/primaryDarkColor</color>
+    <color name="colorSecondaryTextColored">@color/primaryColor</color>
+    <!-- Matching colored background -->
+    <color name="colorBackgroundColored">@color/primaryLightColor</color>
+    <!-- Used for Splash Screen background and elsewhere as needed-->
+    <color name="colorDefaultBackground">@color/cardview_light_background</color>
+    <color name="innerCardBackgroundColor">@color/colorDefaultBackground</color>
+</resources>
