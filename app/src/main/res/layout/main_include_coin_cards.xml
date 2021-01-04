@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/content_main">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/penny_card"
+        style="@style/CoinCardStyle"
+        android:alpha=".8"
+        app:layout_constraintEnd_toStartOf="@id/nickel_card"
+        app:layout_constraintStart_toStartOf="@+id/instructions_banner"
+        app:layout_constraintTop_toBottomOf="@+id/instructions_banner">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/penny"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@string/penny"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/penny" />
+
+            <EditText
+                android:id="@+id/et_penny"
+                style="@style/EditTextStyle"
+                android:layout_height="wrap_content"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/nickel_card"
+        style="@style/CoinCardStyle"
+        app:layout_constraintEnd_toStartOf="@id/guide"
+        app:layout_constraintStart_toEndOf="@id/penny_card"
+        app:layout_constraintTop_toBottomOf="@id/instructions_banner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/nickel"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@string/nickel"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/nickel" />
+
+            <EditText
+                android:id="@+id/et_nickel"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dime_card"
+        style="@style/CoinCardStyle"
+        app:layout_constraintEnd_toStartOf="@id/quarter_card"
+        app:layout_constraintStart_toEndOf="@id/guide"
+        app:layout_constraintTop_toBottomOf="@id/instructions_banner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/dime"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@string/dime"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/dime" />
+
+            <EditText
+                android:id="@+id/et_dime"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quarter_card"
+        style="@style/CoinCardStyle"
+        app:layout_constraintEnd_toEndOf="@id/instructions_banner"
+        app:layout_constraintStart_toEndOf="@id/dime_card"
+        app:layout_constraintTop_toBottomOf="@id/instructions_banner">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/quarter"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:contentDescription="@string/quarter"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/quarter" />
+
+            <EditText
+                android:id="@+id/et_quarter"
+                style="@style/EditTextStyle"
+                android:hint="@string/numberHint" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</merge>
