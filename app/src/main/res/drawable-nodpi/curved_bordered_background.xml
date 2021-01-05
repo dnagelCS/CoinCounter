@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <solid android:color="@color/backgroundColoredColor" />
+    <solid android:color="@color/colorBackgroundColored" />
 
-    <stroke android:width="@dimen/fab_margin_quarter"
+    <stroke android:width="@dimen/card_margin"
         android:color="@color/primaryColor"
         />
 
-    <corners android:bottomRightRadius="@dimen/fab_margin_quarter"
-        android:bottomLeftRadius="@dimen/fab_margin_quarter"
-        android:topLeftRadius="@dimen/fab_margin_quarter"
-        android:topRightRadius="@dimen/fab_margin_quarter"/>
+    <corners android:bottomRightRadius="@dimen/card_margin"
+        android:bottomLeftRadius="@dimen/card_margin"
+        android:topLeftRadius="@dimen/card_margin"
+        android:topRightRadius="@dimen/card_margin"/>
 </shape>

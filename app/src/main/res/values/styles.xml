@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="banner_margin">24dp</dimen>
-    <dimen name="small_text">12sp</dimen>
-
     <style name="BannerStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
