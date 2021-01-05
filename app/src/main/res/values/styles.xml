@@ -2,6 +2,7 @@
 <resources>
 
     <style name="BannerStyle">
+        <item name="cardBackgroundColor">@drawable/curved_bordered_background</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/standard_margin</item>
@@ -14,6 +15,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">@dimen/card_margin</item>
+        <item name="cardBackgroundColor">@drawable/curved_bordered_background</item>
     </style>
 
     <style name="EditTextStyle">
@@ -27,7 +29,6 @@
 
     <!-- main_include_status_bar_placeholder -->
     <style name="statusBarStyle">
-        <item name="android:weightSum">1</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:divider">?dividerVertical</item>
@@ -36,8 +37,8 @@
     </style>
 
     <style name="tvStatusStyle">
-        <item name="android:layout_weight">.5</item>
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@android:color/primary_text_dark</item>
         <item name="android:textSize">@dimen/small_text</item>
