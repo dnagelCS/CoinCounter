@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:tools="http://schemas.android.com/tools"
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="@layout/content_main">
 
     <androidx.cardview.widget.CardView
@@ -19,9 +19,8 @@
             <ImageView
                 android:id="@+id/penny"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/image_size"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/penny"
-                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/penny" />
 
             <EditText
@@ -47,9 +46,8 @@
             <ImageView
                 android:id="@+id/nickel"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/image_size"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/nickel"
-                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/nickel" />
 
             <EditText
@@ -74,9 +72,8 @@
             <ImageView
                 android:id="@+id/dime"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/image_size"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/dime"
-                android:scaleType="fitCenter"
                 app:srcCompat="@drawable/dime" />
 
             <EditText
@@ -101,9 +98,9 @@
             <ImageView
                 android:id="@+id/quarter"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/image_size"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/quarter"
-                android:scaleType="fitCenter"
+                android:scaleType="center"
                 app:srcCompat="@drawable/quarter" />
 
             <EditText
