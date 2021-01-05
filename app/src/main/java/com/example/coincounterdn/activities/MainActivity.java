@@ -7,6 +7,7 @@ import com.example.coincounterdn.lib.Utils;
 import com.example.coincounterdn.models.CoinCounter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -19,10 +20,15 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+import static com.example.coincounterdn.models.CoinCounter.getCoinCounterObjectFromJSONString;
+import static com.example.coincounterdn.models.CoinCounter.getJSONStringFrom;
+
 public class MainActivity extends AppCompatActivity {
     private CoinCounter mCoinCounter;
     private EditText mEt_Penny, mEt_Nickel, mEt_Dime, mEt_Quarter;
     private TextView mTv_statusMssg;
+
+    private final String mKEY_COIN_COUNTER = "COIN COUNTER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,5 +111,22 @@ public class MainActivity extends AppCompatActivity {
     private void showAbout() {
         Utils.showInfoDialog (MainActivity.this,
                 R.string.about, R.string.about_text);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(mKEY_COIN_COUNTER, getJSONStringFrom(mCoinCounter));
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        mCoinCounter = getCoinCounterObjectFromJSONString(savedInstanceState.getString(mKEY_COIN_COUNTER));
+        updateUI();
+    }
+
+    private void updateUI() {
+        mTv_statusMssg.setText(R.string.name);
     }
 }
