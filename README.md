@@ -1,9 +1,9 @@
 # Coin Calculator
 
-4 cards with each type of coin is displayed.  
-User enters the amount for each coin.  
-The total will be calculated and displayed on the bottom.   
-The "X" button in the top bar clears all the numbers.   
+* 4 cards with each type of coin is displayed.  
+* User enters the amount for each coin.  
+* The total will be calculated and displayed on the bottom.   
+* The "X" button in the top bar clears all the numbers.   
 
 ![Coin Counter Before](screenshots/CoinCounterBefore.png)
 
