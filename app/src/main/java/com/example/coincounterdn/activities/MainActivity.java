@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         mCoinCounter.setCountOfNickels(mEt_Nickel.getText().toString());
         mCoinCounter.setCountOfDimes(mEt_Dime.getText().toString());
         mCoinCounter.setCountOfQuarters(mEt_Quarter.getText().toString());
-        
+
         mTv_statusMssg.setText(
                 String.format(Locale.getDefault(), "%s: %d",
                         getString(R.string.total),
@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void clearAll() {
-        mEt_Penny.setText(R.string.numberHint);
-        mEt_Nickel.setText(R.string.numberHint);
-        mEt_Dime.setText(R.string.numberHint);
-        mEt_Quarter.setText(R.string.numberHint);
+        mEt_Penny.getText().clear();
+        mEt_Nickel.getText().clear();
+        mEt_Dime.getText().clear();
+        mEt_Quarter.getText().clear();
     }
 
     private void showAbout() {
